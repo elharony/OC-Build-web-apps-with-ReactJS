@@ -7,7 +7,8 @@ class Filters extends React.Component {
                 <div className="form-group">
                     <input 
                         type="search" 
-                        value={this.props.searchQuery} 
+                        value={this.props.searchQuery}
+                        onChange={(e) => this.props.updateSearch(e.target.value)}
                     />
                 </div>
                 <div className="form-group">

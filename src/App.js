@@ -22,6 +22,15 @@ class App extends Component {
         '6': {id: 6, category: 'Furniture', price: '$100', stocked: true, name: 'Bean Bag'}
       }
     }
+
+    // Binding
+    this.updateSearch = this.updateSearch.bind(this)
+  }
+
+  updateSearch(query) {
+    this.setState({
+      searchQuery: query
+    })
   }
 
   render() {
@@ -30,6 +39,7 @@ class App extends Component {
         <Filters 
           searchProduct={this.state.searchQuery}
           inStock={this.state.inStock}
+          updateSearch={this.updateSearch}
         />
         <ProductList 
           products={this.state.products}
