@@ -25,11 +25,18 @@ class App extends Component {
 
     // Binding
     this.updateSearch = this.updateSearch.bind(this)
+    this.inStockUpdate = this.inStockUpdate.bind(this)
   }
 
   updateSearch(query) {
     this.setState({
       searchQuery: query
+    })
+  }
+
+  inStockUpdate() {
+    this.setState({
+      inStock: !this.state.inStock
     })
   }
 
@@ -40,6 +47,7 @@ class App extends Component {
           searchProduct={this.state.searchQuery}
           inStock={this.state.inStock}
           updateSearch={this.updateSearch}
+          inStockUpdate={this.inStockUpdate}
         />
         <ProductList 
           products={this.state.products}

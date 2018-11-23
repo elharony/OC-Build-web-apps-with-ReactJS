@@ -13,8 +13,9 @@ class Filters extends React.Component {
                 </div>
                 <div className="form-group">
                     <input 
-                        type="checkbox" 
-                        checked={this.props.inStock}
+                        type="checkbox"
+                        defaultChecked={this.props.inStock} 
+                        onChange={this.props.inStockUpdate}
                     /> Only show products in stock
                 </div>
             </div>
