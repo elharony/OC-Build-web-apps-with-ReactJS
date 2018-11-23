@@ -12,3 +12,8 @@ label {
 .out-of-stock {
   color: red
 }
+.SortableColumnHeader-current {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000
+}

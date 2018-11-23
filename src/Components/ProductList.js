@@ -8,7 +8,7 @@ class ProductList extends React.Component {
         super(props)
         this.state = {
             sort: {
-                column: 'name',
+                column: 'price',
                 direction: 'desc'
             }
         }
@@ -62,8 +62,14 @@ class ProductList extends React.Component {
             <table>
                 <thead>
                     <tr>
-                        <ProductTableColumn name="name"/>
-                        <ProductTableColumn name="price"/>
+                        <ProductTableColumn 
+                            column="name" 
+                            currentSort={this.state.sort}
+                        />
+                        <ProductTableColumn 
+                            column="price" 
+                            currentSort={this.state.sort}
+                        />
                     </tr>
                 </thead>
                 <tbody>
