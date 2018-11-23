@@ -11,6 +11,8 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      searchQuery: '',
+      inStock: false,
       products: {
         '1': {id: 1, category: 'Musical Instruments', price: '$459.99', stocked: true, name: 'Clarinet'},
         '2': {id: 2, category: 'Musical Instruments', price: '$5,000', stocked: true, name: 'Harpsicord'},
@@ -25,8 +27,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Filters />
-        <ProductList products={this.state.products}/>
+        <Filters 
+          searchProduct={this.state.searchQuery}
+          inStock={this.state.inStock}
+        />
+        <ProductList 
+          products={this.state.products}
+          searchQuery={this.state.searchQuery}
+          inStock={this.state.inStock}
+        />
         <AddProduct />
       </div>
     )
