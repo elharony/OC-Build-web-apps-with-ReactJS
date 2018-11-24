@@ -26,6 +26,7 @@ class App extends Component {
     // Binding
     this.updateInput = this.updateInput.bind(this)
     this.addProduct = this.addProduct.bind(this)
+    this.deleteProduct = this.deleteProduct.bind(this)
   }
 
   updateInput(data) {
@@ -37,6 +38,14 @@ class App extends Component {
     this.setState((prevState) => {
       let products = prevState.products
       products[product.id] = product
+      return {products}
+    })
+  }
+
+  deleteProduct(id) {
+    this.setState((prevState) => {
+      let products = prevState.products
+      delete products[id]
       return {products}
     })
   }
@@ -53,6 +62,7 @@ class App extends Component {
           products={this.state.products}
           searchQuery={this.state.searchQuery}
           inStock={this.state.inStock}
+          deleteProduct={this.deleteProduct}
         />
         <AddProduct onAdd={this.addProduct}/>
       </div>

@@ -52,7 +52,11 @@ class ProductList extends React.Component {
             }
 
             rows.push(
-                <ProductTableRow product={product} key={product.id} />
+                <ProductTableRow 
+                    product={product} 
+                    key={product.id}
+                    deleteProduct={this.props.deleteProduct}
+                />
             )
 
         })
