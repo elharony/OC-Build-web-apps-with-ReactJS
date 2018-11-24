@@ -1,44 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# OC | Build web apps with ReactJS
+This repo contains some dumb code that I wrote during `Build web apps with ReactJS` course, part of the `Front-end Developer Path` at [OpenClassrooms](https://openclassrooms.com/en/paths/61-front-end-developer)
 
-## Available Scripts
+## Projects
+I consider them more of exercises than projects due to their simplicity, but yeah - let's call them projects for now:
 
-In the project directory, you can run:
+### 01: Ticking Clock
+A Live Digital Clock using `React Event Lifecycle`!
 
-### `npm start`
+### 02: Background Changer
+A Simple button that changes its parent `background` when triggered, it also changes its text according to the new background
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 03: Store
+This is the most complex one, it's a store with a static data objects, it has some features: `Search Filters`, `Sort Options`, `Add Product Form`, `Delete Product Button`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Getting Started
+Every project has its own branch:
 
-### `npm test`
+- P1: `01-ticking-clock`
+- P2: `02-background-changer`
+- P3: `03-store`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+We will start by getting the project to our local machine:
 
-### `npm run build`
+- `git clone https://github.com/elharony/OC-Build-web-apps-with-ReactJS.git`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After that, we need to switch to a specific project:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- `git checkout {branchName}`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Then, RUN our APP!
 
-### `npm run eject`
+- `yarn start`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+> Feel free to use `npm` instead!
