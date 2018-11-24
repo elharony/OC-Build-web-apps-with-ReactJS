@@ -25,10 +25,20 @@ class App extends Component {
 
     // Binding
     this.updateInput = this.updateInput.bind(this)
+    this.addProduct = this.addProduct.bind(this)
   }
 
   updateInput(data) {
     this.setState(data)
+  }
+
+  addProduct(product) {
+    product.id = new Date().getTime()
+    this.setState((prevState) => {
+      let products = prevState.products
+      products[product.id] = product
+      return {products}
+    })
   }
 
   render() {
@@ -44,7 +54,7 @@ class App extends Component {
           searchQuery={this.state.searchQuery}
           inStock={this.state.inStock}
         />
-        <AddProduct />
+        <AddProduct onAdd={this.addProduct}/>
       </div>
     )
   }
