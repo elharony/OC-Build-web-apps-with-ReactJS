@@ -15,6 +15,7 @@ class ProductList extends React.Component {
 
         // Binding
         this.sortByColumnAndDirection = this.sortByColumnAndDirection.bind(this)
+        this.updateSort = this.updateSort.bind(this)
     }
 
     // Sort by 'column' and 'direction'
@@ -38,6 +39,15 @@ class ProductList extends React.Component {
         let productsAsArray = Object.keys(this.props.products).map((productId) => this.props.products[productId])
         // Get the sorted array
         return productsAsArray.sort(this.sortByColumnAndDirection)
+    }
+
+    updateSort(column, direction) {
+        this.setState({
+            sort: {
+                column: column,
+                direction: direction
+            }
+        })    
     }
 
 
@@ -69,10 +79,12 @@ class ProductList extends React.Component {
                         <ProductTableColumn 
                             column="name" 
                             currentSort={this.state.sort}
+                            updateSort={this.updateSort}
                         />
                         <ProductTableColumn 
                             column="price" 
                             currentSort={this.state.sort}
+                            updateSort={this.updateSort}
                         />
                     </tr>
                 </thead>
